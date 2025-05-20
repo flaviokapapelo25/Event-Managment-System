@@ -41,7 +41,7 @@ A full-stack event booking system built with ASP.NET Core 8.0, implementing a 3-
 
 ## Project Structure
 
-### Event Booking System/ **Presentation Layer (ASP.NET Core MVC)**
+### Event Management System/ **Presentation Layer (ASP.NET Core MVC)**
 
 - Controllers/ *MVC controllers handling HTTP requests (e.g., EventController.cs, BookingController.cs)*
 - Models/ *View models for UI data binding and validation (e.g., EventViewModel.cs, BookingViewModel.cs)*
@@ -51,14 +51,14 @@ A full-stack event booking system built with ASP.NET Core 8.0, implementing a 3-
 - appsettings.json *Configuration file for connection strings and application settings*
 - Program.cs *Application entry point for service configuration and middleware setup*
 
-### Areeb.BLL/ **Business Logic Layer**
+### BLL/ **Business Logic Layer**
 
 - Services/ *Business logic for events, bookings, and emails (e.g., EventService.cs, BookingService.cs)*
 - DTOs/ *Data Transfer Objects for communication between layers (e.g., EventDto.cs, BookingDto.cs)*
 - EmailTemplates/ *HTML and text templates for email notifications (e.g., BookingConfirmation.html)*
 - Interfaces/ *Service interfaces for dependency injection (e.g., IEventService.cs)*
 
-### Areeb.DAL/ **Data Access Layer**
+### DAL/ **Data Access Layer**
 
 - Entities/ *Database entities representing tables (e.g., Event.cs, Booking.cs, User.cs)*
 - Repositories/ *Repository pattern for data access (e.g., EventRepository.cs, BookingRepository.cs)*
@@ -67,19 +67,19 @@ A full-stack event booking system built with ASP.NET Core 8.0, implementing a 3-
 
 ## Dependencies
 
-### Main Project (Event Booking System)
+### Main Project (Event Management System)
 - ASP.NET Core 8.0
 - Entity Framework Core
 - Identity Framework
 - Bootstrap
 - jQuery
 
-### Business Layer (Areeb.BLL)
+### Business Layer (BLL)
 - MailKit (4.12.0)
 - MimeKit (4.12.0)
 - Microsoft.AspNetCore.Http.Features (5.0.17)
 
-### Data Layer (Areeb.DAL)
+### Data Layer (DAL)
 - Microsoft.AspNetCore.Identity.EntityFrameworkCore (8.0.12)
 - Microsoft.EntityFrameworkCore.SqlServer (8.0.12)
 
