@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Booking>
+
+<div class="container mt-4">
+    <h2>My Bookings</h2>
+
+    @if (Model.Any())
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Event Name</th>
+                    <th class="text-center">Date</th>
+                    <th class="text-center">Location</th>
+                    <th class="text-end">Price</th>
+                    <th class="text-center">Booking Date</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var booking in Model)
+                {
+                    <tr>
+                        <td class="text-start">@booking.Event.Name</td>
+                        <td class="text-center">@DateOnly.FromDateTime(booking.Event.StartDate)</td>
+                        <td class="text-center">@booking.Event.Location</td>
+                        <td class="text-end">@booking.Event.Price.ToString("C")</td>
+                        <td class="text-center">@booking.BookingDate.ToShortDateString()</td>
+                        <td class="text-center">
+                            <a asp-action="Delete" asp-route-id="@booking.Id" class="btn btn-outline-danger">
+                                <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            You have no bookings yet.
+        </div>
+    }
+</div>

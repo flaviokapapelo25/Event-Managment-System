@@ -1,3 +1,23 @@
-﻿@{
-    Layout = "_Layout";
+﻿ @inject UserManager<IdentityUser> UserManager
+ @inject SignInManager<IdentityUser> SignInManager
+
+@{
+    bool isAdmin = false;
+    if (SignInManager.IsSignedIn(User)) {
+        var user = await UserManager.GetUserAsync(User);
+
+        if (UserManager.IsInRoleAsync(user!, "Admin").Result)
+        {
+            Layout = "~/Views/Shared/_IdentityLayout.cshtml";
+            isAdmin = true;
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+
+        ViewData["isAdmin"] = isAdmin; 
+    }
+    
+   
 }

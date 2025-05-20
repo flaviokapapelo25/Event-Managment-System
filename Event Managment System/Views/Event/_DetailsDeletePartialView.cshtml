@@ -1,0 +1,73 @@
+﻿@model Event
+
+<div class="card-body">
+    <div class="row align-items-start mb-4">
+        <div class="col-md-3">
+            <img src="@Url.Content(string.IsNullOrEmpty(Model.ImageUrl) ? "/images/default.jpg" : Model.ImageUrl)"
+                 class="img-fluid rounded-circle shadow-sm" style="width: 150px; height: 150px; object-fit: cover;"
+                 alt="Event Image" />
+        </div>
+        <div class="col-md-9">
+            <h2 class="h4 border-bottom pb-2">Event Overview</h2>
+            <p class="lead text-muted">@Model.Description</p>
+            <span class="badge bg-primary">@Model.Category.ToString()</span>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="h5 card-title">@Html.DisplayNameFor(e => e.Location)</h3>
+                    <p class="card-text">@Model.Location</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="h5 card-title">@Html.DisplayNameFor(e => e.Price)</h3>
+                    <p class="card-text fw-bold">@Model.Price.ToString("C")</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="h5 card-title">@Html.DisplayNameFor(e => e.StartDate)</h3>
+                    <p class="card-text">@Model.StartDate.ToString("MMMM dd, yyyy h:mm tt")</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="h5 card-title">@Html.DisplayNameFor(e => e.EndDate)</h3>
+                    <p class="card-text">@Model.EndDate.ToString("MMMM dd, yyyy h:mm tt")</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="h5 card-title">@Html.DisplayNameFor(e => e.Capacity)</h3>
+                    <p class="card-text">@Model.Capacity persons</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="h5 card-title">Remaining Tickets</h3>
+                    <p class="card-text fw-bold">@Model.TicketsAvailable</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
