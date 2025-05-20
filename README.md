@@ -141,7 +141,7 @@ The system uses MailKit for sending emails. Here's how to configure email settin
 {
   "EmailSettings": {
     "Mail": "your-email@gmail.com",
-    "DisplayName": "Event Booking System",
+    "DisplayName": "Event Managment System",
     "Password": "your-app-password",
     "Host": "smtp.gmail.com",
     "Port": 587
