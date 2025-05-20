@@ -4,17 +4,17 @@
 A full-stack event booking system built with ASP.NET Core 8.0, implementing a 3-tier architecture pattern.
 
 ### Layers
-1. **Presentation Layer** (Event Booking System)
+1. **Presentation Layer** (Event Management System)
    - MVC-based web application
    - User interface and controllers
    - View models and client-side logic
 
-2. **Business Logic Layer** (Areeb.BLL)
+2. **Business Logic Layer** (BLL)
    - Business services and operations
    - DTOs for data transfer
    - Email templates and notifications
 
-3. **Data Access Layer** (Areeb.DAL)
+3. **Data Access Layer** (DAL)
    - Entity Framework Core implementation
    - Database entities and configurations
    - Repository pattern implementation
