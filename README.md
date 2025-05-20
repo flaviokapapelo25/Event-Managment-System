@@ -1,4 +1,4 @@
-# Event Booking System
+# Event Managment System
 
 ## Overview
 A full-stack event booking system built with ASP.NET Core 8.0, implementing a 3-tier architecture pattern.
