@@ -1,0 +1,22 @@
+﻿@model Event
+@{
+    ViewData["Title"] = "Delete Event";
+}
+
+@* Can be enhanced as Ui *@
+
+<div class="container py-4">
+    <div class="card shadow">
+        <div class="card">
+            <h1 class="text-center  mb-2"> Are you sure you want delete @Model.Name</h1>
+        </div>
+
+        <partial name="_DetailsDeletePartialView" model="Model" />
+
+
+        <div class="py-2 m-auto">
+            <a class="btn btn-danger px-3 py-2" asp-action="DeleteConfirmed" asp-route-id="@Model.Id"> Delete</a>
+            <a class="btn btn-dark px-3 py-2" asp-action="Index"> Back To List</a>
+        </div>
+    </div>
+</div>

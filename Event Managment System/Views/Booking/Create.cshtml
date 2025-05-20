@@ -1,0 +1,27 @@
+﻿@model CreateBookingViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center">Book @Model.EventName</h1>
+
+<form method="post">
+    <div class="form-group mb-3 col-md-6 m-auto py-2">
+        <div class="form-group">
+            <label asp-for="@Model.Quantity" class="control-label"></label>
+            <input asp-for="@Model.Quantity" class="form-control" type="number" min="1" required />
+            <span asp-validation-for="@Model.Quantity" class="text-danger"></span>
+        </div>
+    </div>
+
+    <input type="hidden" asp-for="@Model.EventId" />
+    <input type="hidden" asp-for="@Model.EventName"/>
+    <div class="form-group row justify-content-center">
+        <input type="submit" value="Create" class="btn btn-success col-md-1" />
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

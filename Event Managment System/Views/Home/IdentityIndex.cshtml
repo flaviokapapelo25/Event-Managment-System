@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_IdentityLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IdentityHome</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-2 text-center">Welcome to the Event Booking System</h1>
+        <p class="text-center">Manage your events and bookings efficiently.</p>
+        <hr />
+        <div class="text-center">
+            <a class="btn btn-primary" asp-controller="User" asp-action="Index">Manage Users</a>
+            <a class="btn btn-secondary" asp-controller="Role" asp-action="Index">Manage Roles</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,8 +1,9 @@
 using System.Diagnostics;
+using Event_Booking_System.Models;
 using Event_Managment_System.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Event_Managment_System.Controllers
+namespace Event_Booking_System.Controllers
 {
     public class HomeController : Controller
     {
@@ -19,6 +20,11 @@ namespace Event_Managment_System.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult IdentityIndex()
         {
             return View();
         }

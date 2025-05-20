@@ -20,3 +20,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+tr {
+    width: 100%;
+    height: 60px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.nav-auth_btn:hover {
+    color: #fff !important;
+}
