@@ -1,217 +1,149 @@
-# Event Managment System
+# Event Management System 🎉
+
+Welcome to the **Event Management System** repository! This project is designed to simplify the process of managing and booking events. Built with ASP.NET Core 8.0, this full-stack web application leverages a robust 3-tier architecture to deliver a seamless user experience.
+
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/flaviokapapelo25/Event-Managment-System/releases)
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Key Features](#key-features)
+3. [Architecture](#architecture)
+4. [Technologies Used](#technologies-used)
+5. [Getting Started](#getting-started)
+6. [Usage](#usage)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
 ## Overview
-A full-stack event booking system built with ASP.NET Core 8.0, implementing a 3-tier architecture pattern.
 
-### Layers
-1. **Presentation Layer** (Event Management System)
-   - MVC-based web application
-   - User interface and controllers
-   - View models and client-side logic
+The **Event Management System** allows users to easily create, manage, and book events. Whether you're an organizer looking to set up an event or a user wanting to book a spot, this application provides the tools you need. The use of ASP.NET Core ensures high performance and scalability, while the 3-tier architecture keeps the code organized and maintainable.
 
-2. **Business Logic Layer** (BLL)
-   - Business services and operations
-   - DTOs for data transfer
-   - Email templates and notifications
+## Key Features
 
-3. **Data Access Layer** (DAL)
-   - Entity Framework Core implementation
-   - Database entities and configurations
-   - Repository pattern implementation
+- **User Authentication**: Secure user login and registration using ASP.NET Identity.
+- **Event Management**: Create, update, and delete events with ease.
+- **Admin Dashboard**: Monitor events and manage users from a dedicated admin panel.
+- **Email Notifications**: Stay informed with email updates using MailKit.
+- **Role-Based Access Control**: Different user roles ensure proper access levels.
+- **Responsive Design**: Enjoy a user-friendly interface on any device.
 
-## Prerequisites
-- .NET 8.0 SDK
-- SQL Server (Express or Developer Edition)
-- Visual Studio 2022 or Visual Studio Code
-- Git
+## Architecture
 
-## Required Software
-1. **.NET 8.0 SDK**
-   - Download from: https://dotnet.microsoft.com/download/dotnet/8.0
-   - Verify installation: `dotnet --version`
+The system follows a **3-tier architecture**:
 
-2. **SQL Server**
-   - Download SQL Server Express: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
-   - Download SQL Server Management Studio (SSMS): https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
+1. **Presentation Layer**: The user interface built with ASP.NET MVC and Razor Pages.
+2. **Business Logic Layer**: Contains the core application logic and handles data processing.
+3. **Data Access Layer**: Interacts with the database using Entity Framework Core and LINQ.
 
-3. **IDE**
-   - Visual Studio 2022: https://visualstudio.microsoft.com/downloads/
-   - Visual Studio Code: https://code.visualstudio.com/
+This structure enhances maintainability and scalability, allowing for easier updates and modifications.
 
+## Technologies Used
 
-## Project Structure
+- **ASP.NET Core 8.0**: The framework for building the web application.
+- **Entity Framework Core**: An ORM for database operations.
+- **MailKit**: For sending email notifications.
+- **SQL Server**: The database management system.
+- **Dependency Injection**: To manage dependencies throughout the application.
+- **Repository Pattern**: For abstracting data access logic.
+- **LINQ**: For querying data in a more readable format.
+- **ASP.NET Identity**: For user authentication and authorization.
+- **Role-Based Access Control**: To manage user permissions effectively.
 
-### Event Management System/ **Presentation Layer (ASP.NET Core MVC)**
+## Getting Started
 
-- Controllers/ *MVC controllers handling HTTP requests (e.g., EventController.cs, BookingController.cs)*
-- Models/ *View models for UI data binding and validation (e.g., EventViewModel.cs, BookingViewModel.cs)*
-- Views/ *Razor views for rendering the user interface, including shared layouts (_Layout.cshtml)*
-- wwwroot/ *Static files like CSS, JavaScript, and images (includes Bootstrap and jQuery libraries)*
-- Areas/ *Organized feature modules for Admin and User functionalities*
-- appsettings.json *Configuration file for connection strings and application settings*
-- Program.cs *Application entry point for service configuration and middleware setup*
+To set up the **Event Management System** locally, follow these steps:
 
-### BLL/ **Business Logic Layer**
+### Prerequisites
 
-- Services/ *Business logic for events, bookings, and emails (e.g., EventService.cs, BookingService.cs)*
-- DTOs/ *Data Transfer Objects for communication between layers (e.g., EventDto.cs, BookingDto.cs)*
-- EmailTemplates/ *HTML and text templates for email notifications (e.g., BookingConfirmation.html)*
-- Interfaces/ *Service interfaces for dependency injection (e.g., IEventService.cs)*
+- .NET SDK 8.0 or higher
+- SQL Server
+- A code editor like Visual Studio or Visual Studio Code
 
-### DAL/ **Data Access Layer**
+### Installation
 
-- Entities/ *Database entities representing tables (e.g., Event.cs, Booking.cs, User.cs)*
-- Repositories/ *Repository pattern for data access (e.g., EventRepository.cs, BookingRepository.cs)*
-- Data/ *Entity Framework Core database context (AppDbContext.cs) and configurations*
-- Migrations/ *Entity Framework Core migrations for database schema updates*
+1. Clone the repository:
 
-## Dependencies
-
-### Main Project (Event Management System)
-- ASP.NET Core 8.0
-- Entity Framework Core
-- Identity Framework
-- Bootstrap
-- jQuery
-
-### Business Layer (BLL)
-- MailKit (4.12.0)
-- MimeKit (4.12.0)
-- Microsoft.AspNetCore.Http.Features (5.0.17)
-
-### Data Layer (DAL)
-- Microsoft.AspNetCore.Identity.EntityFrameworkCore (8.0.12)
-- Microsoft.EntityFrameworkCore.SqlServer (8.0.12)
-
-## Installation Steps
-
-1. **Clone the Repository**
    ```bash
-   git clone [repository-url]
-   cd Areeb.Event-Booking-System
+   git clone https://github.com/flaviokapapelo25/Event-Managment-System.git
    ```
 
-2. **Restore Dependencies**
+2. Navigate to the project directory:
+
+   ```bash
+   cd Event-Managment-System
+   ```
+
+3. Restore the NuGet packages:
+
    ```bash
    dotnet restore
    ```
 
-3. **Configure Database**
-   - Open `appsettings.json` in the main project
-   - Update the connection string:
-   ```json
-   "ConnectionStrings": {
-     "DefaultConnection": "Server=YOUR_SERVER;Database=EventBookingDB;Trusted_Connection=True;TrustServerCertificate=True;"
-   }
-   ```
+4. Set up the database:
 
-4. **Apply Database Migrations**
+   - Open SQL Server Management Studio.
+   - Create a new database named `EventManagementDB`.
+   - Update the connection string in `appsettings.json` to point to your database.
+
+5. Run the migrations to create the necessary tables:
+
    ```bash
    dotnet ef database update
    ```
 
-5. **Run the Application**
+6. Start the application:
+
    ```bash
    dotnet run
    ```
 
-   ### Using Package Manager Console
-1. Open Visual Studio
-2. Go to Tools > NuGet Package Manager > Package Manager Console
-3. Make sure the Default Project is set to "Areeb.DAL"
-4. Run the following commands:
-```powershell
-# Add a new migration
-Add-Migration MigrationName
+### Accessing the Application
 
-# Update database
-Update-Database
-```
+Once the application is running, open your web browser and navigate to `http://localhost:5000`. You will see the home page of the Event Management System.
 
-Note: When using Package Manager Console, ensure you have the following NuGet packages installed in your DAL project:
-- Microsoft.EntityFrameworkCore.Tools
-- Microsoft.EntityFrameworkCore.Design
+## Usage
 
-  ## Email Sending Configuration
+### User Registration and Login
 
-The system uses MailKit for sending emails. Here's how to configure email settings:
+1. Click on the **Register** link to create a new account.
+2. Fill in the required details and submit the form.
+3. After registration, log in using your credentials.
 
-1. **Update appsettings.json**
-```json
-{
-  "EmailSettings": {
-    "Mail": "your-email@gmail.com",
-    "DisplayName": "Event Managment System",
-    "Password": "your-app-password",
-    "Host": "smtp.gmail.com",
-    "Port": 587
-  }
-}
-```
+### Managing Events
 
-2. **Email Templates**
-The system includes the following email templates in `Areeb.BLL/EmailTemplates/`:
-- Booking Confirmation
-- Event Reminder
-- Password Reset
-- Welcome Email
+- **Create an Event**: Navigate to the event management section and fill in the event details.
+- **Edit an Event**: Click on the event you wish to modify and make the necessary changes.
+- **Delete an Event**: Select the event and choose the delete option.
 
-3. **Gmail Configuration**
-If using Gmail:
-- Enable 2-Step Verification in your Google Account
-- Generate an App Password:
-  1. Go to Google Account Settings
-  2. Security
-  3. 2-Step Verification
-  4. App Passwords
-  5. Generate a new app password for "Mail"
+### Admin Dashboard
 
+As an admin, you can:
 
-## Features
-- User Authentication and Authorization
-- Event Management
-- Booking System
-- Email Notifications
-- Admin Dashboard
-- User Profile Management
-- Role-based Access Control
-- Event Categories
-- Booking History
-- Email Notifications
+- View all registered users.
+- Monitor events and manage user roles.
+- Send email notifications to users.
 
-## Development
+## Contributing
 
-### Running the Project
-1. Open the solution in Visual Studio
-2. Set the main project (Event Booking System) as the startup project
-3. Press F5 or click the Run button
+We welcome contributions! If you would like to help improve the Event Management System, please follow these steps:
 
-### Database Migrations
-```bash
-# Add a new migration
-dotnet ef migrations add MigrationName
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch to your forked repository.
+5. Open a pull request detailing your changes.
 
-# Update database
-dotnet ef database update
-```
+## License
 
-## Troubleshooting
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### Common Issues
+## Contact
 
-1. **Database Connection Issues**
-   - Ensure SQL Server is running
-   - Verify connection string in appsettings.json
-   - Check SQL Server authentication mode
+For any inquiries or support, feel free to reach out:
 
-2. **Build Errors**
-   - Clean solution: `dotnet clean`
-   - Delete bin and obj folders
-   - Restore packages: `dotnet restore`
-   - Rebuild solution: `dotnet build`
+- **Email**: your-email@example.com
+- **GitHub**: [flaviokapapelo25](https://github.com/flaviokapapelo25)
 
-3. **Runtime Errors**
-   - Check application logs
-   - Verify all required services are running
-
-
+Explore the **Releases** section for the latest updates and versions of the Event Management System. [Download Releases](https://github.com/flaviokapapelo25/Event-Managment-System/releases) to get started today!
